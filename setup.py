@@ -8,6 +8,10 @@ setuptools.setup(name="hkrmlcourse",
       author="Jonas Engström",
       author_email="JonasEngstrom@users.noreply.github.com",
       license="MIT",
+      install_requires=[
+            'yfinance',
+            'pandas'
+      ]
       package_dir={"": "src"},
       packages=setuptools.find_packages(where="src")
       )
