@@ -2,7 +2,7 @@
 
 import datetime
 
-def days_ago(number_of_days_ago):
+def days_ago(number_of_days_ago: int) -> str:
     """
     Takes an integer and returns the date that many days back from today.
 
