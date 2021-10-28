@@ -17,8 +17,6 @@ def drop_young_stocks(stock_data: pandas.DataFrame,
     :rtype: pandas.DataFrame
     """
     ticker_ages = stock_data.Open.count()
-    print(ticker_ages)
-    young_tickers = ticker_ages[ticker_ages > threshold].index
-    print(young_tickers)
+    young_tickers = ticker_ages[ticker_ages < threshold].index
 
     return stock_data.drop(young_tickers, axis = 1, level = 1)
