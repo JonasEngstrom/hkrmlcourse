@@ -18,7 +18,7 @@ def generate_appreciation_labels(stock_history: pandas.DataFrame,
     :return: A labels indexed by date and ticker symbols.
     :rtype: pandas.DataFrame
     """
-    label_data_frame = stock_history.Close / stock_history.Open - 1
+    label_data_frame = stock_history.Close / stock_history.Open - 1 > 0
     shifted_data_frame = label_data_frame.shift(shift_days)
 
     column_titles = hkrmlcourse.generate_multiindex.generate_multiindex(
