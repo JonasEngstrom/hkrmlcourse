@@ -2,6 +2,7 @@
 
 import yfinance
 import pandas
+
 import hkrmlcourse.variables
 
 def get_sp500_history(tickers_to_import: str =
