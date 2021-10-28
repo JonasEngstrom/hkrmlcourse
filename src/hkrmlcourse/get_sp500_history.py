@@ -43,7 +43,8 @@ sp500_tickers = ("A AAL AAP AAPL ABBV ABC ABMD ABT ACN ADBE ADI ADM ADP ADSK "
                  "WAB WAT WBA WDC WEC WELL WFC WHR WLTW WM WMB WMT WRB WRK "
                  "WST WU WY WYNN XEL XLNX XOM XRAY XYL YUM ZBH ZBRA ZION ZTS")
 
-def get_sp500_history(tickers: str = sp500_tickers) -> pandas.DataFrame:
+def get_sp500_history(tickers: str = sp500_tickers,
+                      start_date: str = '1900-01-01') -> pandas.DataFrame:
     """
     Returns a Pandas DataFrame with historical data for the S&P 500,
     downloaded from Yahoo Finance. Uses tickers from October 27th 2021,
@@ -51,7 +52,9 @@ def get_sp500_history(tickers: str = sp500_tickers) -> pandas.DataFrame:
 
     :param tickers: Ticker symbols, default set to S&P 500 companies.
     :type tickers: str
+    :param start_date: Start date for retrieved data, default 1900-01-01.
+    :type start_date: str
     :return: A Pandas DataFrame with historical data for the S&P 500.
     :rtype: Pandas.DataFrame
     """
-    return yfinance.download(tickers)
+    return yfinance.download(tickers, start = start_date)
