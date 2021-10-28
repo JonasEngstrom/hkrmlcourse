@@ -24,7 +24,7 @@ def generate_appreciation_labels(stock_history: pandas.DataFrame,
     column_titles = hkrmlcourse.generate_multiindex.generate_multiindex(
         shifted_data_frame,
         f"IntraDayAppreciation{abs(shift_days)}Day"
-        f"{'s' if abs(shift_days) !> 1 else ''}InThe"
+        f"{'s' if abs(shift_days) != 1 else ''}InThe"
         f"{'Future' if shift_days <= 0 else 'Past'}"
     )
 
