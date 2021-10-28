@@ -2,10 +2,10 @@
 
 import yfinance
 import pandas
-import src.hkrmlcourse.variables
+import hkrmlcourse.variables
 
 def get_sp500_history(tickers_to_import: str =
-                      src.hkrmlcourse.variables.sp500_tickers,
+                      hkrmlcourse.variables.sp500_tickers,
                       start_date: str = '1900-01-01') -> pandas.DataFrame:
     """
     Returns a Pandas DataFrame with historical data for the S&P 500,
