@@ -16,12 +16,9 @@ def generate_appreciation_column(stocks: pandas.DataFrame) -> pandas.DataFrame:
     appreciation = stocks.Close / stocks.Open - 1
 
     column_titles = hkrmlcourse.generate_multiindex.generate_multiindex(
-        stocks,
+        appreciation,
         'IntraDayAppreciation'
     )
-
-    print(appreciation.columns)
-    print(column_titles)
 
     appreciation.columns = column_titles
 
