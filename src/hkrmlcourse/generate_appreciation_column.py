@@ -20,6 +20,9 @@ def generate_appreciation_column(stocks: pandas.DataFrame) -> pandas.DataFrame:
         'IntraDayAppreciation'
     )
 
+    print(appreciation.columns)
+    print(column_titles)
+
     appreciation.columns = column_titles
 
     return appreciation
