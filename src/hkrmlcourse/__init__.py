@@ -6,4 +6,5 @@ __all__ = ['days_ago',
            'generate_multiindex',
            'get_sp500_history',
            'make_divisible_by',
+           'setup_tpu',
            'variables']
