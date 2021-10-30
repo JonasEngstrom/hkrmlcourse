@@ -15,6 +15,6 @@ def setup_tpu() -> tf.distribute.TPUStrategy:
 
     resolver = tf.distribute.cluster_resolver.TPUClusterResolver(TF_MASTER)
     tf.config.experimental_connect_to_cluster(resolver)
-    tf.tpu.experimental.intitialize_tpu_system(resolver)
+    tf.tpu.experimental.initialize_tpu_system(resolver)
 
     return tf.distribute.TPUStrategy(resolver)
