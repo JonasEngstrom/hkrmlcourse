@@ -40,3 +40,8 @@ sp500_tickers = ("A AAL AAP AAPL ABBV ABC ABMD ABT ACN ADBE ADI ADM ADP ADSK "
                  "URI USB V VFC VIAC VLO VMC VNO VRSK VRSN VRTX VTR VTRS VZ "
                  "WAB WAT WBA WDC WEC WELL WFC WHR WLTW WM WMB WMT WRB WRK "
                  "WST WU WY WYNN XEL XLNX XOM XRAY XYL YUM ZBH ZBRA ZION ZTS")
+
+# The following string conatains the tickers of the companies in the current
+# S&P 500 (see above) that have history dating back at least to 1962-01-02.
+old_tickers = ("AEP BA CAT CNP CVX DIS DTE ED GD GE HPQ IBM IP JNJ KO KR MO "
+               "MRK MRO MSI PG XOM")
